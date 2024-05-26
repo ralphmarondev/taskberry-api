@@ -56,7 +56,7 @@ MIDDLEWARE = [
 # CORS_ALLOWED_ORIGINS = [
 #     'http://localhost:8000'
 # ]
-CORS_ALLOWD_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'config.urls'
 
