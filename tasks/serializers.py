@@ -2,9 +2,10 @@ from rest_framework import routers, serializers, viewsets
 from .models import Task
 
 class TaskSerializer(serializers.HyperlinkedModelSerializer):
-    # formatting the date
-    created_at = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S", read_only=True)
+    # formatting the datetime fields
+    start_time = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S")
+    end_time = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S")
 
     class Meta:
         model = Task
-        fields = ['id', 'title', 'description', 'completed', 'created_at']
+        fields = ['id', 'description', 'priority', 'start_time', 'end_time']

@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME' : 'yellow-world',
+        'NAME' : 'vueberry',
         'USER': 'root',
         'PASSWORD': 'toor'
     }

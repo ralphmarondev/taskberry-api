@@ -1,10 +1,15 @@
 from django.db import models
 
 class Task(models.Model):
-    title = models.CharField(max_length=100)
+    PRIORITY_CHOICES = [
+        ('high', 'High'),
+        ('low', 'Low'),
+    ]
+
     description = models.TextField(blank=True, null=True)
-    completed = models.BooleanField(default=False)
-    created_at = models.DateTimeField(auto_now_add=True)
+    priority = models.CharField(max_length=4, choices=PRIORITY_CHOICES, default='low')
+    start_time = models.DateTimeField(max_length=50)
+    end_time = models.DateTimeField(max_length=50)
 
     def __str__(self) -> str:
         return self.title
