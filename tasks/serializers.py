@@ -9,3 +9,4 @@ class TaskSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Task
         fields = ['id', 'description', 'priority', 'start_time', 'end_time']
+        # fields = '__all__'
